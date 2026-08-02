@@ -2,25 +2,65 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --background-subtle: #f6f6f5;
+  --background-deep: #14161a;
+  --foreground: #33363a;
+  --foreground-strong: #15171a;
+  --foreground-on-dark: #f4f4f3;
+  --foreground-on-dark-muted: #9aa1a8;
+  --border-color: #e2e2e0;
+  --border-color-on-dark: #33383e;
+  --accent: #55606b;
+  --accent-strong: #2c3540;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-subtle: var(--background-subtle);
+  --color-background-deep: var(--background-deep);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-strong: var(--foreground-strong);
+  --color-foreground-on-dark: var(--foreground-on-dark);
+  --color-foreground-on-dark-muted: var(--foreground-on-dark-muted);
+  --color-border: var(--border-color);
+  --color-border-on-dark: var(--border-color-on-dark);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic UI", "Yu Gothic", Meiryo, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "palt";
+  -webkit-font-smoothing: antialiased;
+}
+
+section[id] {
+  scroll-margin-top: 7rem;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
 }
