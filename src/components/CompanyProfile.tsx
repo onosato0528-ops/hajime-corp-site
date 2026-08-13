@@ -1,4 +1,5 @@
 import Container from "./Container";
+import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { companyInfo } from "@/data/company";
 
@@ -58,26 +59,26 @@ export default function CompanyProfile() {
       <Container>
         <SectionHeading eyebrow="Company" title="会社概要" />
 
-        <div className="mt-16 overflow-x-auto border-b border-border">
-          <table className="w-full min-w-[560px] border-collapse text-sm">
+        <Reveal delay={100} className="mt-16 border-b border-border">
+          <table className="w-full table-fixed border-collapse text-sm">
             <caption className="sr-only">一株式会社の会社概要</caption>
             <tbody>
               {rows.map((row) => (
                 <tr key={row.label} className="border-t border-border">
                   <th
                     scope="row"
-                    className="w-40 whitespace-nowrap py-6 pr-6 text-left align-top text-[13px] font-medium tracking-wide text-foreground/55 sm:w-56"
+                    className="w-20 py-7 pr-3 text-left align-top text-[12px] font-medium leading-relaxed tracking-[0.02em] text-foreground/50 sm:w-48 sm:py-8 sm:pr-6 sm:text-[13px] sm:tracking-[0.04em]"
                   >
                     {row.label}
                   </th>
-                  <td className="py-6 align-top text-[15px] leading-loose text-foreground-strong">
+                  <td className="py-7 align-top text-sm leading-relaxed text-foreground-strong sm:py-8 sm:text-[15px]">
                     {row.value}
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

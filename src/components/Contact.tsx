@@ -1,4 +1,5 @@
 import Container from "./Container";
+import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import ContactForm from "./ContactForm";
 import { companyInfo } from "@/data/company";
@@ -13,7 +14,10 @@ export default function Contact() {
           lead="お取引、端末の仕入れ・販売、その他事業に関するお問い合わせは、電話またはメールよりご連絡ください。"
         />
 
-        <div className="mt-20 grid gap-16 md:grid-cols-[minmax(0,280px)_1fr] md:gap-20">
+        <Reveal
+          delay={100}
+          className="mt-20 grid gap-16 md:grid-cols-[minmax(0,280px)_1fr] md:gap-20"
+        >
           <div className="flex flex-col gap-10 border-t border-border pt-10 md:border-t-0 md:pt-0">
             <div>
               <p className="eyebrow text-foreground/45">Tel</p>
@@ -38,7 +42,7 @@ export default function Contact() {
           <div>
             <ContactForm />
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

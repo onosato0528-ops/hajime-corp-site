@@ -44,8 +44,8 @@ export const companyInfo = {
   capital: "100万円",
   phone: "03-4400-1446",
   phoneHref: "tel:0344001446",
-  email: "hashino@hahime83.co.jp",
-  emailHref: "mailto:hashino@hahime83.co.jp",
+  email: "hashino@hajime83.co.jp",
+  emailHref: "mailto:hashino@hajime83.co.jp",
   license: {
     authority: "東京都公安委員会",
     number: "第304362418154号",

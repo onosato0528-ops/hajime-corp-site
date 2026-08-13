@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "./Container";
+import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { businessItems } from "@/data/company";
 import deviceImage from "../../public/images/business-device.jpg";
@@ -7,9 +8,24 @@ import logisticsImage from "../../public/images/business-logistics.jpg";
 import handshakeImage from "../../public/images/trust-handshake.jpg";
 
 const galleryImages = [
-  { src: deviceImage, alt: "オフィスのデスクに並べられたスマートフォンとタブレット" },
-  { src: logisticsImage, alt: "物流拠点と世界地図が重なる、国内外への流通イメージ" },
-  { src: handshakeImage, alt: "オフィスで交わされる誠実な取引の握手" },
+  {
+    src: deviceImage,
+    alt: "オフィスのデスクに並べられたスマートフォンとタブレット",
+    label: "Devices",
+    caption: "モバイル端末・通信機器",
+  },
+  {
+    src: logisticsImage,
+    alt: "物流拠点と世界地図が重なる、国内外への流通イメージ",
+    label: "Logistics",
+    caption: "国内外への流通ネットワーク",
+  },
+  {
+    src: handshakeImage,
+    alt: "オフィスで交わされる誠実な取引の握手",
+    label: "Partnership",
+    caption: "誠実な取引と信頼関係",
+  },
 ];
 
 export default function Business() {
@@ -22,20 +38,26 @@ export default function Business() {
           lead="モバイル端末・通信機器を中心に、仕入れから販売まで一貫した流通事業を展開しています。"
         />
 
-        <div className="mt-14 grid grid-cols-3 gap-3 sm:gap-5">
+        <Reveal delay={100} className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-5">
           {galleryImages.map((image) => (
-            <div key={image.alt} className="relative aspect-[3/4] overflow-hidden bg-background-subtle">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                placeholder="blur"
-                sizes="(min-width: 768px) 33vw, 33vw"
-                className="object-cover"
-              />
-            </div>
+            <figure key={image.alt} className="group flex flex-col border border-border">
+              <div className="relative aspect-[4/5] overflow-hidden bg-background-subtle sm:aspect-[3/4]">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  placeholder="blur"
+                  sizes="(min-width: 640px) 33vw, 100vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                />
+              </div>
+              <figcaption className="flex flex-col gap-1 px-5 py-4 sm:px-6 sm:py-5">
+                <span className="eyebrow text-accent">{image.label}</span>
+                <span className="text-sm text-foreground/70">{image.caption}</span>
+              </figcaption>
+            </figure>
           ))}
-        </div>
+        </Reveal>
 
         <div className="mt-16 flex flex-col divide-y divide-border border-t border-border sm:mt-20">
           {businessItems.map((item, index) => (

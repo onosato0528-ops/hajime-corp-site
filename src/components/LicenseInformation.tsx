@@ -1,11 +1,12 @@
 import Container from "./Container";
+import Reveal from "./Reveal";
 import { companyInfo } from "@/data/company";
 
 export default function LicenseInformation() {
   return (
     <section id="license" className="border-y border-border bg-background-subtle py-24 sm:py-32">
       <Container>
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-3 text-center">
+        <Reveal className="mx-auto flex max-w-2xl flex-col items-center gap-3 text-center">
           <div className="flex items-center gap-3">
             <span className="h-px w-8 bg-accent" aria-hidden="true" />
             <span className="eyebrow text-accent">License</span>
@@ -17,9 +18,9 @@ export default function LicenseInformation() {
           <p className="mt-2 max-w-md text-sm leading-loose text-foreground sm:text-base">
             当社は古物営業法に基づき、以下の許可を取得しています。
           </p>
-        </div>
+        </Reveal>
 
-        <div className="relative mx-auto mt-14 max-w-xl px-4">
+        <Reveal delay={100} className="relative mx-auto mt-14 max-w-xl px-4">
           <span className="absolute -left-1 -top-1 h-6 w-6 border-l border-t border-foreground-strong/40" />
           <span className="absolute -right-1 -top-1 h-6 w-6 border-r border-t border-foreground-strong/40" />
           <span className="absolute -bottom-1 -left-1 h-6 w-6 border-b border-l border-foreground-strong/40" />
@@ -36,7 +37,7 @@ export default function LicenseInformation() {
               {companyInfo.license.number}
             </p>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

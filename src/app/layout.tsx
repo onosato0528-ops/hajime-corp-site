@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: `%s｜${companyInfo.name}`,
   },
   description:
-    "一株式会社は、東京都新宿区を拠点に、スマートフォン・通信機器の仕入れ、販売、買取及び輸出入を行う企業です。",
+    "一株式会社は、東京都新宿区を拠点に、スマートフォン・通信機器の仕入れ、販売、買取及び輸出入を行う企業です。古物商許可を取得し、法人・事業者のお客様との安定した取引を行っています。",
   robots: {
     index: true,
     follow: true,
@@ -19,6 +19,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: siteConfig.locale,
     siteName: companyInfo.name,
+    description:
+      "一株式会社は、東京都新宿区を拠点に、スマートフォン・通信機器の仕入れ、販売、買取及び輸出入を行う企業です。古物商許可を取得し、法人・事業者のお客様との安定した取引を行っています。",
   },
   twitter: {
     card: "summary_large_image",
@@ -31,6 +33,8 @@ const organizationJsonLd = {
   name: companyInfo.name,
   url: siteConfig.url,
   logo: `${siteConfig.url}/icon.svg`,
+  description:
+    "スマートフォン・通信機器の仕入れ、販売、買取及び輸出入を行う流通企業。古物商許可取得済み。",
   telephone: companyInfo.phone,
   email: companyInfo.email,
   foundingDate: "2024-03-28",
@@ -49,6 +53,14 @@ const organizationJsonLd = {
   founder: {
     "@type": "Person",
     name: companyInfo.representativeName,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    telephone: companyInfo.phone,
+    email: companyInfo.email,
+    areaServed: "JP",
+    availableLanguage: "Japanese",
   },
 };
 

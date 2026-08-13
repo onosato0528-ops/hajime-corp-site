@@ -41,10 +41,10 @@ export default function Hero() {
             <span className="eyebrow text-white/70">Mobile &amp; Telecom Distribution</span>
           </div>
 
-          <h1 className="max-w-3xl text-4xl font-bold leading-[1.15] tracking-tight text-white sm:text-5xl md:text-6xl">
-            モバイル端末・
+          <h1 className="max-w-2xl text-3xl font-bold leading-[1.3] tracking-tight text-white sm:text-4xl md:text-5xl">
+            モバイルとグローバル流通で、
             <br className="hidden sm:block" />
-            通信機器の流通事業
+            ビジネスの未来をつなぐ。
           </h1>
 
           <div className="flex flex-col gap-5 border-l border-white/25 pl-6">

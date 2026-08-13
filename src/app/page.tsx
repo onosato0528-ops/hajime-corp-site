@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "一株式会社｜モバイル端末・通信機器の仕入れ・販売・買取・輸出入",
   description:
-    "一株式会社は、東京都新宿区を拠点に、スマートフォン・通信機器の仕入れ、販売、買取及び輸出入を行う企業です。",
+    "一株式会社は、東京都新宿区を拠点に、スマートフォン・通信機器の仕入れ、販売、買取及び輸出入を行う企業です。古物商許可を取得し、法人・事業者のお客様との安定した取引を行っています。",
   alternates: {
     canonical: "/",
   },

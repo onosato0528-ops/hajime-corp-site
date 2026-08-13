@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "./Container";
+import Reveal from "./Reveal";
 import cityImage from "../../public/images/philosophy.jpg";
 
 export default function Philosophy() {
@@ -19,7 +20,7 @@ export default function Philosophy() {
       />
 
       <Container>
-        <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-10 text-center">
+        <Reveal className="relative mx-auto flex max-w-3xl flex-col items-center gap-10 text-center">
           <div className="flex items-center gap-3">
             <span className="h-px w-8 bg-foreground-on-dark-muted" aria-hidden="true" />
             <span className="eyebrow text-foreground-on-dark-muted">Philosophy</span>
@@ -33,7 +34,7 @@ export default function Philosophy() {
           <p className="max-w-xl text-base leading-loose text-foreground-on-dark-muted sm:text-lg">
             一株式会社は、安心、迅速、誠実な取引を通じて、お客様と長期的な信頼関係を築くことを大切にしています。変化の速いモバイル市場において、適正かつ円滑な流通を支える企業を目指します。
           </p>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );
