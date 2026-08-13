@@ -1,6 +1,8 @@
 import Container from "./Container";
+import NetworkBackdrop from "./NetworkBackdrop";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import SectionWatermark from "./SectionWatermark";
 import { strengthItems } from "@/data/company";
 
 const icons: Record<string, React.ReactNode> = {
@@ -39,7 +41,9 @@ const icons: Record<string, React.ReactNode> = {
 
 export default function Strengths() {
   return (
-    <section id="strengths" className="bg-background-subtle py-28 sm:py-36">
+    <section id="strengths" className="relative overflow-hidden bg-background py-28 sm:py-36">
+      <SectionWatermark word="VALUE" align="left" />
+      <NetworkBackdrop className="right-0 top-0 h-64 w-[420px] text-accent/[0.07] sm:h-80 sm:w-[560px]" />
       <Container>
         <SectionHeading eyebrow="Why Us" title="当社の特徴" />
 

@@ -1,6 +1,7 @@
 import Container from "./Container";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import SectionWatermark from "./SectionWatermark";
 import { companyInfo } from "@/data/company";
 
 interface ProfileRow {
@@ -56,9 +57,13 @@ export default function CompanyProfile() {
 
   return (
     <section id="company" className="bg-background-subtle py-28 sm:py-36">
+      <div className="relative overflow-hidden">
+        <SectionWatermark word="COMPANY" align="right" />
+        <Container>
+          <SectionHeading eyebrow="Company" title="会社概要" />
+        </Container>
+      </div>
       <Container>
-        <SectionHeading eyebrow="Company" title="会社概要" />
-
         <Reveal delay={100} className="mt-16 border-b border-border">
           <table className="w-full table-fixed border-collapse text-sm">
             <caption className="sr-only">一株式会社の会社概要</caption>

@@ -64,3 +64,10 @@ section[id] {
   letter-spacing: 0.28em;
   text-transform: uppercase;
 }
+
+.bg-grid-faint {
+  background-image:
+    linear-gradient(to right, var(--border-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
+  background-size: 56px 56px;
+}

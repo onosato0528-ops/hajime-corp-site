@@ -12,11 +12,6 @@ export interface BusinessItem {
   id: string;
   title: string;
   description: string;
-  points?: string[];
-  highlight?: {
-    label: string;
-    value: string;
-  };
 }
 
 export interface StrengthItem {
@@ -78,35 +73,22 @@ export const contactNavItem: NavItem = { label: "お問い合わせ", href: "/#c
 
 export const businessItems: BusinessItem[] = [
   {
-    id: "mobile-distribution",
-    title: "モバイル端末・通信機器の流通事業",
+    id: "mobile-devices",
+    title: "モバイル端末・通信機器",
     description:
-      "新品・中古のスマートフォンをはじめとするモバイル端末、通信機器及び周辺機器の仕入れ、販売、買取及び輸出入を行っています。",
-    points: [
-      "スマートフォンの仕入れ",
-      "スマートフォンの販売",
-      "スマートフォンの買取",
-      "法人向け端末販売",
-      "国内外への販売",
-      "輸出入業務",
-      "通信機器及び周辺機器の販売",
-    ],
+      "スマートフォンを中心に、モバイル端末、通信機器及び周辺機器を取り扱っています。新品・中古を問わず、幅広いラインナップに対応します。",
   },
   {
-    id: "secondhand-dealer",
-    title: "古物事業",
+    id: "trading",
+    title: "仕入れ・販売・買取",
     description:
-      "東京都公安委員会の許可を取得し、古物営業法を遵守した適正な買取及び販売を行っています。",
-    highlight: {
-      label: companyInfo.license.authority,
-      value: `古物商許可番号 ${companyInfo.license.number}`,
-    },
+      "法人・事業者のお客様を対象に、端末の仕入れ、販売及び買取を行っています。買取は古物営業法に基づき、適正に実施しています。",
   },
   {
-    id: "ec-web",
-    title: "EC・Web事業",
+    id: "logistics",
+    title: "国内外への流通・輸出入",
     description:
-      "インターネットを利用した商品の販売並びにWebサイト、Webコンテンツ及び各種サービスの企画、制作、運営を行っています。",
+      "国内外の取引先への商品流通及び輸出入を行い、円滑なグローバル供給網の構築に取り組んでいます。",
   },
 ];
 

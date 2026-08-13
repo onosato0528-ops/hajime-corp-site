@@ -1,19 +1,24 @@
 import Container from "./Container";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import SectionWatermark from "./SectionWatermark";
 import ContactForm from "./ContactForm";
 import { companyInfo } from "@/data/company";
 
 export default function Contact() {
   return (
     <section id="contact" className="bg-background py-28 sm:py-36">
+      <div className="relative overflow-hidden">
+        <SectionWatermark word="CONTACT" align="left" />
+        <Container>
+          <SectionHeading
+            eyebrow="Contact"
+            title="お問い合わせ"
+            lead="お取引、端末の仕入れ・販売、その他事業に関するお問い合わせは、電話またはメールよりご連絡ください。"
+          />
+        </Container>
+      </div>
       <Container>
-        <SectionHeading
-          eyebrow="Contact"
-          title="お問い合わせ"
-          lead="お取引、端末の仕入れ・販売、その他事業に関するお問い合わせは、電話またはメールよりご連絡ください。"
-        />
-
         <Reveal
           delay={100}
           className="mt-20 grid gap-16 md:grid-cols-[minmax(0,280px)_1fr] md:gap-20"

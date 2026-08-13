@@ -4,7 +4,18 @@ import { companyInfo } from "@/data/company";
 
 export default function LicenseInformation() {
   return (
-    <section id="license" className="border-y border-border bg-background-subtle py-24 sm:py-32">
+    <section
+      id="license"
+      className="relative overflow-hidden border-y border-border bg-background-subtle py-24 sm:py-32"
+    >
+      <div
+        aria-hidden="true"
+        className="bg-grid-faint absolute inset-0 opacity-60"
+        style={{
+          maskImage: "radial-gradient(ellipse at center, black 0%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 0%, transparent 70%)",
+        }}
+      />
       <Container>
         <Reveal className="mx-auto flex max-w-2xl flex-col items-center gap-3 text-center">
           <div className="flex items-center gap-3">
@@ -26,14 +37,14 @@ export default function LicenseInformation() {
           <span className="absolute -bottom-1 -left-1 h-6 w-6 border-b border-l border-foreground-strong/40" />
           <span className="absolute -bottom-1 -right-1 h-6 w-6 border-b border-r border-foreground-strong/40" />
 
-          <div className="flex flex-col items-center gap-4 border-y border-border px-10 py-14 text-center sm:px-16">
+          <div className="flex flex-col items-center gap-4 border-y border-border px-6 py-14 text-center sm:px-16">
             <p className="text-xs tracking-[0.14em] text-foreground/60">
               {companyInfo.license.authority}
             </p>
             <p className="text-xl font-bold tracking-tight text-foreground-strong sm:text-2xl">
               古物商許可番号
             </p>
-            <p className="text-2xl font-bold tracking-[0.06em] text-foreground-strong sm:text-3xl">
+            <p className="whitespace-nowrap text-lg font-bold tracking-[0.02em] text-foreground-strong sm:text-3xl sm:tracking-[0.06em]">
               {companyInfo.license.number}
             </p>
           </div>
