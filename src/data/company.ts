@@ -90,6 +90,12 @@ export const businessItems: BusinessItem[] = [
     description:
       "国内外の取引先への商品流通及び輸出入を行い、円滑なグローバル供給網の構築に取り組んでいます。",
   },
+  {
+    id: "ec-web",
+    title: "EC・Web事業",
+    description:
+      "Webサイトやインターネットを活用した各種サービスの企画・運営に取り組んでいます。ECをはじめとするオンライン領域を通じて、事業の可能性を広げています。",
+  },
 ];
 
 export const strengthItems: StrengthItem[] = [

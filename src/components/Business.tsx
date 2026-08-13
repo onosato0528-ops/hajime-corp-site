@@ -7,6 +7,7 @@ import { businessItems } from "@/data/company";
 import mobileImage from "../../public/images/business-mobile.jpg";
 import deviceImage from "../../public/images/business-device.jpg";
 import logisticsImage from "../../public/images/business-logistics.jpg";
+import ecWebImage from "../../public/images/business-ecweb.jpg";
 
 const images: Record<string, { src: StaticImageData; alt: string }> = {
   "mobile-devices": {
@@ -20,6 +21,10 @@ const images: Record<string, { src: StaticImageData; alt: string }> = {
   logistics: {
     src: logisticsImage,
     alt: "世界地図と物流拠点、コンテナ船が重なる国際物流のイメージ",
+  },
+  "ec-web": {
+    src: ecWebImage,
+    alt: "ノートパソコン、タブレット、スマートフォンに表示されたECサイトとダッシュボード",
   },
 };
 
