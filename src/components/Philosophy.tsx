@@ -1,10 +1,25 @@
+import Image from "next/image";
 import Container from "./Container";
+import cityImage from "../../public/images/philosophy.jpg";
 
 export default function Philosophy() {
   return (
-    <section id="philosophy" className="bg-background-deep py-32 sm:py-44">
+    <section id="philosophy" className="relative overflow-hidden bg-background-deep py-32 sm:py-44">
+      <Image
+        src={cityImage}
+        alt="晴天の下に立ち並ぶガラス張りのオフィスビル群"
+        fill
+        placeholder="blur"
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-background-deep/80"
+      />
+
       <Container>
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-10 text-center">
+        <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-10 text-center">
           <div className="flex items-center gap-3">
             <span className="h-px w-8 bg-foreground-on-dark-muted" aria-hidden="true" />
             <span className="eyebrow text-foreground-on-dark-muted">Philosophy</span>

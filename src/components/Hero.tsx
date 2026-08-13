@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import Container from "./Container";
-import HeroBackground from "./HeroBackground";
+import heroImage from "../../public/images/hero.jpg";
 
 export default function Hero() {
   return (
@@ -8,9 +9,15 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-[92vh] items-center overflow-hidden bg-background-deep text-white sm:min-h-screen"
     >
-      <div className="absolute inset-0">
-        <HeroBackground />
-      </div>
+      <Image
+        src={heroImage}
+        alt="都市のオフィスから見える景色と、デスクに置かれたノートPC・スマートフォン・タブレット"
+        fill
+        priority
+        placeholder="blur"
+        sizes="100vw"
+        className="object-cover"
+      />
       <div
         aria-hidden="true"
         className="absolute inset-0"

@@ -1,6 +1,16 @@
+import Image from "next/image";
 import Container from "./Container";
 import SectionHeading from "./SectionHeading";
 import { businessItems } from "@/data/company";
+import deviceImage from "../../public/images/business-device.jpg";
+import logisticsImage from "../../public/images/business-logistics.jpg";
+import handshakeImage from "../../public/images/trust-handshake.jpg";
+
+const galleryImages = [
+  { src: deviceImage, alt: "オフィスのデスクに並べられたスマートフォンとタブレット" },
+  { src: logisticsImage, alt: "物流拠点と世界地図が重なる、国内外への流通イメージ" },
+  { src: handshakeImage, alt: "オフィスで交わされる誠実な取引の握手" },
+];
 
 export default function Business() {
   return (
@@ -12,7 +22,22 @@ export default function Business() {
           lead="モバイル端末・通信機器を中心に、仕入れから販売まで一貫した流通事業を展開しています。"
         />
 
-        <div className="mt-20 flex flex-col divide-y divide-border border-t border-border">
+        <div className="mt-14 grid grid-cols-3 gap-3 sm:gap-5">
+          {galleryImages.map((image) => (
+            <div key={image.alt} className="relative aspect-[3/4] overflow-hidden bg-background-subtle">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                placeholder="blur"
+                sizes="(min-width: 768px) 33vw, 33vw"
+                className="object-cover"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 flex flex-col divide-y divide-border border-t border-border sm:mt-20">
           {businessItems.map((item, index) => (
             <article
               key={item.id}
